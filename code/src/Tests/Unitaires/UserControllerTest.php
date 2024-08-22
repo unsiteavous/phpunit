@@ -28,4 +28,16 @@ class UserControllerTest extends TestCase
 
     $this->assertEquals($nbUsers, $liElements->length);
   }
+
+  public function testIndexAvecUneAutreMéthode()
+  {
+    ob_start();
+    // vérifier qu'il y a autant de <li> qu'on a d'utilisateurs en BDD
+    $users = (new UserRepository())->getAll();
+    $nbUsers = count($users);
+    $UserController = new UserController();
+    $UserController->index();
+
+    $this->assertEquals($nbUsers, substr_count(ob_get_clean(), '<li>'));
+  }
 }

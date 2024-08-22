@@ -5,18 +5,9 @@ le fichier `composer.json` contient toutes les informations qu'on va donner à c
 
 ```json
 {
-    "autoload": {
-        "psr-4": {
-            "": "./src/"
-        }
-    },
     "require-dev": {
         "phpunit/phpunit": "^11.3"
     },
-    "scripts": {
-        "tests_unitaires": "./vendor/bin/phpunit --colors=always --testdox ./src/Tests/Unitaires/",
-        "tests_fonctionnels": "./vendor/bin/phpunit --colors=always --testdox ./src/Tests/Fonctionnels/"
-    }
 }
 ```
 Cela veut dire qu'on utilise PHPUnit que dans le cadre du développement.
