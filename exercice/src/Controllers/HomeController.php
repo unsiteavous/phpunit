@@ -13,7 +13,7 @@ class HomeController
   {
     if(isset($_SESSION['user_id'])) {
       http_response_code(200);
-      include __DIR__ . '/../views/account.php';
+      include __DIR__ . '/../Views/account.php';
     } else {
       header('Location: /login', true, 302);
     }
@@ -21,6 +21,6 @@ class HomeController
 
   public function error404()
   {
-    include __DIR__ . '/../views/404.php';
+    include __DIR__ . '/../Views/404.php';
   }
 }

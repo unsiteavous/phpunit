@@ -7,7 +7,7 @@ class SecurityController
 {
   public function login()
   {
-    include __DIR__ . "/../views/login.php";
+    include __DIR__ . "/../Views/login.php";
   }
 
   public function auth()

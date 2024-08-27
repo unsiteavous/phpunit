@@ -10,6 +10,6 @@ class UserController
   public function index()
   {
     $users = (new UserRepository())->getAll();
-    include __DIR__ . "/../views/user/list.php";
+    include __DIR__ . "/../Views/user/list.php";
   }
 }
