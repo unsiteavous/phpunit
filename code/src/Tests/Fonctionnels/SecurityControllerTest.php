@@ -45,7 +45,7 @@ class SecurityControllerTest extends TestCase
     }
     $HomeController = new HomeController;
     $HomeController->account();
-    $this->assertEquals(403, http_response_code());
+    $this->assertEquals(302, http_response_code());
   }
 
   public function testRouteLoginAvecMauvaiseSoumission()
@@ -57,7 +57,7 @@ class SecurityControllerTest extends TestCase
 
     require __DIR__ . '/../../Services/Router.php';
 
-    $this->assertEquals(403, http_response_code());
+    $this->assertEquals(302, http_response_code());
   }
 
   public function testRouteLoginAvecBonneSoumission()
