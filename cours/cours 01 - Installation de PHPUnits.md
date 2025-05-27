@@ -18,7 +18,7 @@ composer -v
 
 ## 2. PHPUNIT
 
-Mettez-vous dans le dossier src de votre projet, puis tapez la commande suivante
+Mettez-vous à la racine de votre projet, puis tapez la commande suivante
 
 ```bash
 composer require --dev phpunit/phpunit
